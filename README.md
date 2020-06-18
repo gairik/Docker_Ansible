@@ -21,7 +21,7 @@ docker build . -t ansible_client
 ```
 docker inspect bridge
 ```
-get the ips and then vim the file /etc/ansible/hosts file
+get the ips and then vim the file /etc/ansible/hosts file and add the end of file
 
 ```
 [web]
