@@ -29,3 +29,7 @@ get the ips and then vim the file /etc/ansible/hosts file and add the end of fil
 172.17.0.3
 172.17.0.2
 ```
+#### ~/.vimrc
+```
+set tabstop=2 shiftwidth=2 expandtab cursorcolumn
+```
