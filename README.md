@@ -1,6 +1,18 @@
 # Docker_Ansible
 Create your own Ansible lab with Docker containers
 
+#### Build the master using
+```
+cd Anisble_master
+docker build . -t ansible_master
+```
+
+#### Build the client using
+```
+cd Anisble_client
+docker build . -t ansible_client
+```
+
 #### Run the client using 
 ```
  docker run -d -it ansible_client bash
