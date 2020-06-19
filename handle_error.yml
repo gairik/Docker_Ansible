@@ -1,0 +1,15 @@
+---
+- name:
+  hosts:
+    - 172.17.0.2
+  tasks:
+    - name:
+      apt:
+        name: cis-utils
+        state: latest
+      ignore_errors: yes
+    - name:
+      user:
+        name: user2
+        state: present
+  
