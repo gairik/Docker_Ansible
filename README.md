@@ -21,7 +21,7 @@ docker build . -t ansible_client
 ```
 docker inspect bridge
 ```
-get the ips and then vim the file /etc/ansible/hosts file and add the end of file
+Get the ips and then vim the file /etc/ansible/hosts file and add the end of file
 
 ```
 [web]
@@ -29,6 +29,14 @@ get the ips and then vim the file /etc/ansible/hosts file and add the end of fil
 172.17.0.3
 172.17.0.2
 ```
+#### copy the ssh-keys to the client
+```
+ssh-keygen
+ssh-copy-id -i root@172.17.0.4
+ssh-copy-id -i root@172.17.0.3
+ssh-copy-id -i root@172.17.0.2
+```
+
 #### ~/.vimrc
 ```
 set tabstop=2 shiftwidth=2 expandtab cursorcolumn
