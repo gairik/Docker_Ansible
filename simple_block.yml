@@ -1,0 +1,28 @@
+---
+- name:
+  hosts:
+    - web
+  tasks:
+  - name:
+    block:
+     - name:
+       apt:
+        name: apache2
+        state: present
+     - service:
+        service: apache2
+        enabled: true
+        state: started  
+     - file:
+        path: /var/www/html/index.html
+        mode: 0666
+        state: touch
+     - lineinfile:                    
+        path: /var/www/html/index.html
+        state: present                
+        line: 'Pastry'                
+        create: true 
+     - service:
+        name: apache2
+        state: restarted    
+    when: "'172.17.0.2' in inventory_hostname"
